@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 레시피는? 시작</title>
+        <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f5f1ee;
+            font-family: sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* 제목 스타일 */
+        h1 {
+            color: #292b6f;
+            font-size: 2.8em;
+            margin-top: 80px; /* 제목을 조금 더 아래로 */
+        }
+
+        .login-box {
+            margin: 50px auto;
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 입력 필드 스타일 */
+        .login-box input {
+            width: 100%;
+            height: 45px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        /* 회원가입 버튼 스타일 */
+        .signup-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background-color: #9999a8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 18px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .signup-btn:hover {
+            background-color: #676779; /* hover 색 */
+        }
+
+        /* 로그인 버튼 스타일 */
+        button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+            background-color: #606a8a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 회원가입 버튼 -->
+<!--    <a href="signup.html" class="signup-btn">회원가입</a>-->
+    <a href="{% url 'signup'%}">회원가입</a>
+
+    <h1>오늘의 레시피는?</h1>
+    <div class="login-box">
+        <input type="text" placeholder="이메일">
+        <input type="password" placeholder="비밀번호">
+<!--        <button onclick="location.href='main.html'">로그인</button>-->
+        <button><a href="{% url 'main'%}">로그인</a></button>
+    </div>
+
+     <div class="floating-container">
+    <img src="https://nicholas-olsen.github.io/Todays-Best-Recipe/images/image1.png" class="floating-img">
+    <img src="https://nicholas-olsen.github.io/Todays-Best-Recipe/images/image2.png" class="floating-img">
+    <img src="https://nicholas-olsen.github.io/Todays-Best-Recipe/images/image3.png" class="floating-img">
+    </div>
+
+</body>
+</html>
